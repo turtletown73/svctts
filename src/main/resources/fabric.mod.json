@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "svctts",
+  "version": "${version}",
+  "name": "Simple Voice Chat TTS",
+  "description": "A basic extension for simple voice chat that adds text-to-speech.",
+  "authors": [
+    "GetCmdRolled"
+  ],
+  "contact": {
+    "sources": "https://github.com/turtletown73/svc-tts"
+  },
+  "license": "MIT",
+  "icon": "assets/svctts/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "net.scoobis.svctts.SvcTtsMod"
+    ],
+    "client": [
+      "net.scoobis.svctts.SvcTtsClient"
+    ],
+    "voicechat": [
+      "net.scoobis.svctts.SvcTtsVoicechatPlugin"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": ">=${fabric_version}",
+    "minecraft": ">=${minecraft_version}",
+    "java": ">=${java_version}",
+    "voicechat_api": ">=${voicechat_api_version}"
+  }
+}
