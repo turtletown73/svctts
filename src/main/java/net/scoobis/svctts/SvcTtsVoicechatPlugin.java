@@ -1,6 +1,5 @@
 package net.scoobis.svctts;
 
-
 import de.maxhenkel.voicechat.api.VoicechatApi;
 import de.maxhenkel.voicechat.api.VoicechatClientApi;
 import de.maxhenkel.voicechat.api.VoicechatPlugin;
@@ -9,12 +8,8 @@ import de.maxhenkel.voicechat.api.audiochannel.ClientAudioChannel;
 import de.maxhenkel.voicechat.api.events.*;
 import net.minecraft.client.MinecraftClient;
 
-import java.sql.Array;
-import java.util.Arrays;
-
 public class SvcTtsVoicechatPlugin implements VoicechatPlugin {
     private ClientAudioChannel channel;
-    private VoicechatClientApi api;
 
     public static AudioConverter audioConverter;
 
@@ -35,7 +30,7 @@ public class SvcTtsVoicechatPlugin implements VoicechatPlugin {
     }
 
     public void onClientConnect(ClientVoicechatConnectionEvent event) {
-        api = event.getVoicechat();
+        VoicechatClientApi api = event.getVoicechat();
         assert MinecraftClient.getInstance().player != null;
         channel = api.createStaticAudioChannel(MinecraftClient.getInstance().player.getUuid());
         audioConverter = api.getAudioConverter();

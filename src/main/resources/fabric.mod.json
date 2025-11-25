@@ -8,7 +8,7 @@
     "GetCmdRolled"
   ],
   "contact": {
-    "sources": "https://github.com/turtletown73/svc-tts"
+    "sources": "https://github.com/turtletown73/svctts"
   },
   "license": "MIT",
   "icon": "assets/svctts/icon.png",
@@ -22,6 +22,9 @@
     ],
     "voicechat": [
       "net.scoobis.svctts.SvcTtsVoicechatPlugin"
+    ],
+    "modmenu": [
+      "net.scoobis.svctts.ModMenuIntegration"
     ]
   },
   "depends": {
@@ -29,6 +32,10 @@
     "fabric": ">=${fabric_version}",
     "minecraft": ">=${minecraft_version}",
     "java": ">=${java_version}",
-    "voicechat_api": ">=${voicechat_api_version}"
+    "voicechat_api": ">=${voicechat_api_version}",
+    "cloth-config": ">=${cloth_config_version}"
+  },
+  "recommends": {
+    "modmenu": ">=${mod_menu_version}"
   }
 }

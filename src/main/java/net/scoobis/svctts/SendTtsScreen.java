@@ -22,11 +22,8 @@ public class SendTtsScreen extends Screen {
         messageField.setMaxLength(128);
         setFocused(messageField);
 
-        sendButton = ButtonWidget.builder(Text.literal("Send"), this::send).dimensions(width / 2 - 50, height / 2 + 10, 100, 20).build();
-
-        exitButton = ButtonWidget.builder(Text.literal("X"), button -> {
-            MinecraftClient.getInstance().setScreen(null);
-        }).dimensions(width - 30, 10, 20, 20).build();
+        sendButton = ButtonWidget.builder(Text.translatable("button.svctts.send"), this::send).dimensions(width / 2 - 50, height / 2 + 10, 100, 20).build();
+        exitButton = ButtonWidget.builder(Text.literal("X"), button -> MinecraftClient.getInstance().setScreen(null)).dimensions(width - 30, 10, 20, 20).build();
 
         addDrawableChild(messageField);
         addDrawableChild(sendButton);
