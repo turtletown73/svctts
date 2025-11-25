@@ -80,11 +80,4 @@ jar {
     from("LICENSE") {
         rename { "${it}_${archivesBaseName}" }
     }
-
-    from(zipTree(files("libs/cmu_us_kal.jar").singleFile))
-    from(zipTree(files("libs/cmulex.jar").singleFile))
-    from(zipTree(files("libs/en_us.jar").singleFile))
-    from(zipTree(files("libs/freetts.jar").singleFile))
-    from(zipTree(files("libs/jsapi.jar").singleFile))
-    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
